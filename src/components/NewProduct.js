@@ -13,6 +13,12 @@ const NewProduct = () => {
     // use useDispatch and create a function
     const dispatch = useDispatch();
 
+    // access the store state
+    const loading = useSelector( state => state.products.loading );
+    const error = useSelector(state => state.products.error);
+
+    console.log(loading)
+
     // send to call the action of productActions
     const addProduct = (product) => dispatch( createNewProductAction(product) );
 
@@ -74,6 +80,10 @@ const NewProduct = () => {
                                 d-bloc w-100'
                             >Add</button>
                         </form>
+
+                        { loading ? <p>Loading...</p> : null }
+                        { error ? <p className='alert alert-danger p2 mt-4 text-center'>There was a mistake</p> :
+                        null}
                     </div>
                 </div>
             </div>
