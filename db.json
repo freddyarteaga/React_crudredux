@@ -29,6 +29,26 @@
       "name": "Juice mora",
       "price": 1200,
       "id": 6
+    },
+    {
+      "name": "Juice Pineapple",
+      "price": 1233,
+      "id": 7
+    },
+    {
+      "name": "asd",
+      "price": 132,
+      "id": 8
+    },
+    {
+      "name": "d",
+      "price": 23,
+      "id": 9
+    },
+    {
+      "name": "a",
+      "price": 23,
+      "id": 10
     }
   ]
 }

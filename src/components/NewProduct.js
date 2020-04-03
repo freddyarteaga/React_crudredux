@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 // Action of Redux
 import { createNewProductAction } from '../actions/productActions';
 
-const NewProduct = () => {
+const NewProduct = ({history}) => {
 
     // component state
     const [name, saveName] = useState('');
@@ -38,6 +38,9 @@ const NewProduct = () => {
             name,
             price
         });
+
+        // redirect to Home
+        history.push('/');
     }
     return ( 
         <div className='row justify-content-center'>
