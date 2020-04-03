@@ -1,3 +1,9 @@
+import {
+    ADD_PRODUCT,
+    ADD_PRODUCT_SUCCESS,
+    ADD_PRODUCT_ERROR
+} from '../types'
+
 // each reducer have your own state
 const initialState = {
     products: [],
