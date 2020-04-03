@@ -2,7 +2,44 @@ import React from 'react';
 
 const EditProduct = () => {
     return ( 
-        <h1>From EditProduct.js</h1>
+        <div className='row justify-content-center'>
+            <div className='col-md-8'>
+                <div className='card'>
+                    <div className='card-body'>
+                        <h2 className='text-center mb-4 font-weight-bold'>
+                            Edit Product
+                        </h2>
+
+                        <form>
+                            <div className='form-group'>
+                                <label>Name Product</label>
+                                <input  
+                                    type='text'
+                                    className='form-control'
+                                    placeholder='Name Product'
+                                    name='name'
+                                />
+                            </div>
+                            <div className='form-group'>
+                                <label>Price Product</label>
+                                <input  
+                                    type='number'
+                                    className='form-control'
+                                    placeholder='Price Product'
+                                    name='price'
+                                />
+                            </div>
+
+                            <button
+                                ttype='submit'
+                                className='btn btn-primary font-weight-bold text-uppercase
+                                d-bloc w-100'
+                            >Save Changes</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
      );
 }
  
