@@ -72,8 +72,8 @@ export function getProductsAction() {
 
         try {
             // setTimeout(async () => {
-                const answer = await clientAxios.get('/products');
-                dispatch( downloadProductsSuccess(answer.data) );
+                const result = await clientAxios.get('/products');
+                dispatch( downloadProductsSuccess(result.data) );
             // }, 3000);
            
         } catch (error) {
@@ -101,12 +101,28 @@ const downloadProductsError = () => ({
 
 // select and remove the product
 export function deleteProductAction(id) {
+
     return async (dispatch) => {
         dispatch( obtainProductDelete(id) );
+
+        try {
+            await clientAxios.delete(`/products/${id}`);
+            dispatch( deleteProductSuccess() );
+        } catch (error) {
+            
+        }
+
     }
 }
 
 const obtainProductDelete = id => ({
     type: OBTAIN_PRODUCT_DELETE,
     payload: id
+});
+const deleteProductSuccess = () => ({
+    type: PRODUCT_REMOVED_SUCCESS
+})
+const deleteProductError = () => ({
+    type: PRODUCT_REMOVED_SUCCESS,
+    payload: true
 })

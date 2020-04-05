@@ -1,11 +1,6 @@
 {
   "products": [
     {
-      "id": 1,
-      "name": "Juice of Carrot",
-      "price": "31111"
-    },
-    {
       "id": 2,
       "name": "Juice of Orange",
       "price": "1"
@@ -34,21 +29,6 @@
       "name": "Juice Pineapple",
       "price": 1233,
       "id": 7
-    },
-    {
-      "name": "asd",
-      "price": 132,
-      "id": 8
-    },
-    {
-      "name": "d",
-      "price": 23,
-      "id": 9
-    },
-    {
-      "name": "a",
-      "price": 23,
-      "id": 10
     },
     {
       "name": "Freddy",
