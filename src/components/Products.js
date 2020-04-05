@@ -1,4 +1,5 @@
 import React, { Fragment, useEffect } from 'react';
+import Product from './Product';
 
 // Redux
 import { useSelector, useDispatch } from 'react-redux'
@@ -11,10 +12,14 @@ const Products = () => {
     useEffect(() => {
 
         // check the api
-        const loadPrducts = () => dispatch( getProductsAction() );
-        loadPrducts();
+        const loadProducts = () => dispatch( getProductsAction() );
+        loadProducts();
 
-    }, [])
+    }, []);
+
+    // obtain state
+    const products = useSelector( state => state.products.products );
+    console.log(products);
 
     return ( 
         <Fragment>
@@ -29,7 +34,14 @@ const Products = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    
+                    { products.length === 0 ? 'There are no products' : (
+                        products.map(product => (
+                            <Product 
+                                key={product.id}
+                                product={product}
+                            />
+                        ))
+                    ) }
                 </tbody>
             </table>
         </Fragment>

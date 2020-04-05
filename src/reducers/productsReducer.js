@@ -42,7 +42,7 @@ export default function( state = initialState, action ) {
                 ...state,
                 loading: false,
                 error: null,
-                productos: action.payload
+                products: action.payload
             }
     }
 }

@@ -67,7 +67,7 @@ export function getProductsAction() {
 
         try {
             const answer = await clientAxios.get('/products');
-            dispatch( downloadProductsSuccess() );
+            dispatch( downloadProductsSuccess(answer.data) );
         } catch (error) {
             console.log(error);
             dispatch( downloadProductsError() );
