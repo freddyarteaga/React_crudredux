@@ -1,12 +1,12 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect } from 'react';
 
 // Redux
-import { useSelector, useDispatch } from 'redux'
+import { useSelector, useDispatch } from 'react-redux'
 import { getProductsAction } from '../actions/productActions'
 
 const Products = () => {
 
-    const dispatch = () => ();
+    const dispatch = useDispatch();
 
     useEffect(() => {
 

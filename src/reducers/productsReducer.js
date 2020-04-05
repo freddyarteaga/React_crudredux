@@ -29,6 +29,7 @@ export default function( state = initialState, action ) {
                 products: [...state.products, action.payload]
             }
         case ADD_PRODUCT_ERROR:
+        case DOWNLOAD_PRODUCTS_ERROR:
             return {
                 ...state,
                 loading: false,
@@ -36,5 +37,12 @@ export default function( state = initialState, action ) {
             }
             default:
             return state;
+        case DOWNLOAD_PRODUCTS_SUCCESS:
+            return {
+                ...state,
+                loading: false,
+                error: null,
+                productos: action.payload
+            }
     }
 }
