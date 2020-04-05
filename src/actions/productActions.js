@@ -15,6 +15,7 @@ export function createNewProductAction(product) {
         dispatch( addProduct() );
 
         try {
+
             // insert API
             await clientAxios.post('/products', product);
 
@@ -66,8 +67,11 @@ export function getProductsAction() {
         dispatch( downloadProducts() )
 
         try {
-            const answer = await clientAxios.get('/products');
-            dispatch( downloadProductsSuccess(answer.data) );
+            // setTimeout(async () => {
+                const answer = await clientAxios.get('/products');
+                dispatch( downloadProductsSuccess(answer.data) );
+            // }, 3000);
+           
         } catch (error) {
             console.log(error);
             dispatch( downloadProductsError() );
