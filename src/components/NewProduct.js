@@ -17,6 +17,7 @@ const NewProduct = ({history}) => {
     // access the store state
     const loading = useSelector( state => state.products.loading );
     const error = useSelector(state => state.products.error);
+    const alert = useSelector(state => state.alert.alert);
 
     console.log(loading)
 
@@ -58,6 +59,8 @@ const NewProduct = ({history}) => {
                         <h2 className='text-center mb-4 font-weight-bold'>
                             Add New Product
                         </h2>
+
+                        { alert ? <p className={alert.classes}>{alert.msg}</p> : null }
 
                         <form
                             onSubmit={submitNewProduct}
