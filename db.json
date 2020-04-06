@@ -1,23 +1,23 @@
 {
   "products": [
     {
-      "id": 1,
-      "name": "Juice of Carrot",
-      "price": "31111"
+      "name": "Rib Eye 800g",
+      "price": "900",
+      "id": 1
     },
     {
-      "id": 2,
-      "name": "Juice of Orange",
-      "price": "1"
+      "name": "Juice of Strawberry",
+      "price": "200",
+      "id": 2
     },
     {
-      "name": "Juice of Orange",
-      "price": "300",
+      "name": "Juice Pineapple",
+      "price": 1233,
       "id": 3
     },
     {
       "name": "Rib Eye 800g",
-      "price": "200",
+      "price": "900",
       "id": 4
     },
     {
@@ -26,29 +26,10 @@
       "id": 5
     },
     {
-      "name": "Juice mora",
-      "price": 1200,
-      "id": 6
-    },
-    {
       "name": "Juice Pineapple",
       "price": 1233,
-      "id": 7
-    },
-    {
-      "name": "asd",
-      "price": 132,
-      "id": 8
-    },
-    {
-      "name": "d",
-      "price": 23,
-      "id": 9
-    },
-    {
-      "name": "a",
-      "price": 23,
-      "id": 10
+      "id": 6
     }
+    
   ]
 }
