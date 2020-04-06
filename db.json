@@ -1,11 +1,6 @@
 {
   "products": [
     {
-      "id": 2,
-      "name": "Juice of Orange",
-      "price": "1"
-    },
-    {
       "name": "Juice of Orange",
       "price": "300",
       "id": 3
@@ -21,29 +16,9 @@
       "id": 5
     },
     {
-      "name": "Juice mora",
-      "price": 1200,
-      "id": 6
-    },
-    {
       "name": "Juice Pineapple",
       "price": 1233,
       "id": 7
-    },
-    {
-      "name": "Freddy",
-      "price": 234,
-      "id": 11
-    },
-    {
-      "name": "Freddy",
-      "price": 345,
-      "id": 12
-    },
-    {
-      "name": "3245ty",
-      "price": 2345,
-      "id": 13
     }
   ]
 }
