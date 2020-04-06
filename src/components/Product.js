@@ -4,7 +4,7 @@ import Swal from 'sweetalert2';
 
 // Redux
 import { useDispatch } from 'react-redux';
-import { deleteProductAction } from '../actions/productActions';
+import { deleteProductAction, getProductEdit } from '../actions/productActions';
 
 const Product = ({ product }) => {
     const { name, price, id } = product;
@@ -38,6 +38,7 @@ const Product = ({ product }) => {
 
     // function that redirects on a scheduled basis
     const redirectEdition = product => {
+        dispatch( getProductEdit(product) );
         history.push(`/products/edit/${product.id}`)
     }
 

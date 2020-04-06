@@ -1,11 +1,6 @@
 {
   "products": [
     {
-      "name": "Juice of Orange",
-      "price": "300",
-      "id": 3
-    },
-    {
       "name": "Rib Eye 800g",
       "price": "200",
       "id": 4
@@ -19,6 +14,11 @@
       "name": "Juice Pineapple",
       "price": 1233,
       "id": 7
+    },
+    {
+      "name": "Freddy",
+      "price": 2354,
+      "id": 8
     }
   ]
 }

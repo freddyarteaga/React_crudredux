@@ -7,7 +7,8 @@ import {
     DOWNLOAD_PRODUCTS_ERROR,
     OBTAIN_PRODUCT_DELETE,
     PRODUCT_REMOVED_SUCCESS,
-    PRODUCT_REMOVED_ERROR
+    PRODUCT_REMOVED_ERROR,
+    OBTAIN_PRODUCT_EDIT
 } from '../types';
 
 // each reducer have your own state
@@ -15,7 +16,8 @@ const initialState = {
     products: [],
     error: null,
     loading: false,
-    productDelete: null
+    productDelete: null,
+    productEdit: null
 }
 
 export default function( state = initialState, action ) {
@@ -60,6 +62,11 @@ export default function( state = initialState, action ) {
                 products: state.products.filter( product => product.id !==
                 state.productDelete ),
                 productDelete: null
+            }
+        case OBTAIN_PRODUCT_EDIT:
+            return {
+                ...state,
+                productEdit: action.payload
             }
     }
 }
